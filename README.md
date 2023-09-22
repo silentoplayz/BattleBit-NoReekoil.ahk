@@ -1,18 +1,18 @@
 # BattleBit Remastered AutoHotkey Recoil Control Script
 
 ## Table of Contents
-- [Introduction](#introduction)
-- [Features](#features)
-- [Prerequisites](#prerequisites)
+- [Introduction](#introduction) - Overview of the script's purpose.
+- [Features](#features) - List of key features provided by the script.
+- [Prerequisites](#prerequisites) - Necessary requirements before using the script.
 - [Getting Started](#getting-started)
-  - [Installation](#installation)
-  - [Customization](#customization)
-  - [Running the Script](#running-the-script)
-- [Configuration](#configuration)
-- [Hotkeys](#hotkeys)
-- [INI File Usage](#ini-file-usage)
-- [Important Notes](#important-notes)
-- [Disclaimer](#disclaimer)
+  - [Installation](#installation) - Steps to install AutoHotkey and download the script.
+  - [Customization](#customization) - Instructions for customizing script settings.
+  - [Running the Script](#running-the-script) - How to run the script in your gaming environment.
+- [Configuration](#configuration) - Details about customizing the script's behavior.
+- [Hotkeys](#hotkeys) - List of hotkeys and their functions.
+- [INI File Usage](#ini-file-usage) - How to load and save settings using INI files.
+- [Important Notes](#important-notes) - Essential considerations and warnings.
+- [Disclaimer](#disclaimer) - Legal disclaimer regarding script usage.
 
 ## Introduction
 
