@@ -21,31 +21,31 @@ This AutoHotkey script is designed to assist with controlling recoil and various
 
 ## Features
 
-- **Recoil Control:** The script helps mitigate weapon recoil by adjusting mouse movements in real-time.
-- **Fire Rate Control:** Modify the delay between shots to optimize firing rate and accuracy.
-- **Configuration Settings:** Customize the script's behavior to suit your target window and other preferences.
+- **Recoil Control:** Gain an edge in battles by dynamically adjusting mouse movements to counteract weapon recoil.
+- **Fire Rate Control:** Achieve optimal firing rates and accuracy by tweaking the time between shots.
+- **Configuration Settings:** Customize the script's behavior to match your gaming environment, including window settings and personal preferences.
 - **First Shot Compensation:** Apply pixelX and PixelY adjustments to the first shot to compensate for first-shot recoil.
-- **Dynamic Script Naming:** The script generates unique names if the .ahk script is compiled as an .exe for a poor-man's attempt at masking the process name and whatnot.
+- **Dynamic Script Naming:** When compiled as an .exe, the script generates unique names for added discretion.
 
 ## Prerequisites
 
 Before using the script, make sure you have the following prerequisites:
 
-- [AutoHotkey](https://www.autohotkey.com/download/): must be installed on your system to run the script.
+- [AutoHotkey](https://www.autohotkey.com/download/): This script relies on AutoHotkey, so ensure it's installed on your system.
 
 ## Getting Started
 
 ### Installation
 
 1. **AutoHotkey Installation**:
-   - Ensure you have AutoHotkey installed on your system. You can download it from [AutoHotkey's official website](https://www.autohotkey.com/download).
+   - If you haven't already, download and install AutoHotkey from the [official website](https://www.autohotkey.com/download).
    
 2. **Script Download**:
-   - Download the `NoReekoil.ahk` file from the repository.
+   - Download the `NoReekoil.ahk` file from this repository.
 
 ### Customization
 
-- Customize the script's configuration settings according to your gaming preferences. You can modify settings such as:
+- Customize the script's configuration settings according to your gaming preferences. You can adjust key settings such as:
   - **Recoil Adjustments (pixelX and pixelY):** Modify these values to control horizontal and vertical recoil adjustments.
   - **Fire Rate (shotsPerMinute):** Adjust the number of shots fired per minute for optimal fire rate.
   - **Delay Increments (delayIncrement):** Fine-tune the delay between shots by changing this value.
@@ -61,9 +61,11 @@ Before using the script, make sure you have the following prerequisites:
 
 ## Configuration
 
-- The script's default configuration values can be found in the "Configuration" section of the script.
-- You have the flexibility to adjust settings like recoil adjustments, fire rate, delay increments, and more to fine-tune your gameplay experience.
-- Additionally, the script provides the option to load and save settings from/to an INI file, allowing you to customize settings for different weapons or scenarios.
+Unleash the full potential of the script by customizing its settings:
+
+- Explore default configuration values in the script's "Configuration" section.
+- Tweak settings such as recoil adjustments, fire rate, delay increments, and more to create your ideal gaming experience.
+- Use the script's INI file support to save and load configurations, facilitating easy switches between weapons or scenarios.
 
 ## Hotkeys
 
@@ -109,12 +111,12 @@ Before using the script, make sure you have the following prerequisites:
 
 ## Disclaimer
 
-This script is provided "as-is." The developers and contributors of this script take no responsibility for its usage or any consequences arising from its use. Please use this script at your own discretion and risk.
+This script is provided "as-is." The developers and contributors accept no responsibility for its usage or any resulting consequences. Please employ this script judiciously and acknowledge associated risks.
 
 ## VirusTotal Scan Results
 
-For your peace of mind, I have personally scanned this script using VirusTotal to ensure its safety and integrity. You can view the scan results by clicking the link below:
+Your security matters. The script has been personally scanned with VirusTotal for your peace of mind. You can view the scan results by clicking the link below:
 
 [VirusTotal Scan Results](https://www.virustotal.com/gui/file/cff1bcce92c7e050e5b120056a032dbac2af0f937e2636f53d46f780eaf2ba0f?nocache=1)
 
-I take the security and trust of my users seriously, and I encourage you to verify the scan results before using this script.
+I take the security and trust of my users seriously. Verify the scan results before using the script.
