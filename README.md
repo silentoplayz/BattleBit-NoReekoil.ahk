@@ -55,7 +55,6 @@ Before using the script, make sure you have the following prerequisites:
 
 ### Running the Script
 
-- Save the text file with a `.ahk` extension. For example, you can name it `RecoilControl.ahk`.
 - Double-click the saved `.ahk` file to run the script.
 - The script will only become active when the specified game window process is running.
 
