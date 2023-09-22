@@ -154,7 +154,7 @@ DefaultConfig["periodIncrement"] := 100 ; Increment value for adjusting the peri
 DefaultConfig["firstShotCompensationX"] := 0 ; Horizontal adjustment specifically for the first shot
 DefaultConfig["firstShotCompensationY"] := 1 ; Vertical adjustment specifically for the first shot
 DefaultConfig["isFirstShotEnabled"] := 0 ; Toggle for enabling/disabling the first shot compensation (1 = enabled, 0 = disabled)
-DefaultConfig["TargetWindowName"] := "ChatGPT.exe" ; Default target window name
+DefaultConfig["TargetWindowName"] := "BattleBit.exe" ; Default target window name
 
 ; Set a configuration variable
 Set(varName, varValue) {
