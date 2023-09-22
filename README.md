@@ -41,7 +41,7 @@ Before using the script, make sure you have the following prerequisites:
    - If you haven't already, download and install AutoHotkey from the [official website](https://www.autohotkey.com/download).
    
 2. **Script Download**:
-   - Download the `NoReekoil.ahk` file from this repository.
+   - Download the [`NoReekoil.ahk`](https://github.com/Silentoplayz/BattleBitNoRecoil.ahk/blob/main/NoReekoil.ahk) file from this repository.
 
 ### Customization
 
