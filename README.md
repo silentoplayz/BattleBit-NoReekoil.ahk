@@ -31,12 +31,12 @@ This AutoHotkey script is designed to assist with controlling recoil and various
 
 Before using the script, make sure you have the following prerequisites:
 
-- [AutoHotkey](https://www.autohotkey.com/): must be installed on your system to run the script.
+- [AutoHotkey](https://www.autohotkey.com/download/): must be installed on your system to run the script.
 
 ## Getting Started
 
 1. **Installation**:
-   - Ensure you have AutoHotkey installed on your system. You can download it from [AutoHotkey's official website](https://www.autohotkey.com/).
+   - Ensure you have AutoHotkey installed on your system. You can download it from [AutoHotkey's official website](https://www.autohotkey.com/download).
    - Download the `NoReekoil.ahk` file from the repository.
 
 2. **Customization**:
