@@ -108,7 +108,7 @@ This script is provided "as-is." The developers and contributors of this script 
 
 For your peace of mind, I have personally scanned this script using VirusTotal to ensure its safety and integrity. You can view the scan results by clicking the link below:
 
-[VirusTotal Scan Results]([https://www.virustotal.com/gui/file/your-scan-results-url](https://www.virustotal.com/gui/file/cff1bcce92c7e050e5b120056a032dbac2af0f937e2636f53d46f780eaf2ba0f?nocache=1))
+[VirusTotal Scan Results]([https://www.virustotal.com/gui/file/your-scan-results-url](https://www.virustotal.com/gui/file/cff1bcce92c7e050e5b120056a032dbac2af0f937e2636f53d46f780eaf2ba0f?nocache=1)
 
 I take the security and trust of my users seriously, and I encourage you to verify the scan results before using this script.
 
