@@ -12,7 +12,6 @@
 - [Hotkeys](#hotkeys)
 - [INI File Usage](#ini-file-usage)
 - [Important Notes](#important-notes)
-- [Contributions and Support](#contributions-and-support)
 - [Disclaimer](#disclaimer)
 
 ## Introduction
