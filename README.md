@@ -111,10 +111,8 @@ Unleash the full potential of the script by customizing its settings:
 
 This script is provided "as-is." The developers and contributors accept no responsibility for its usage or any resulting consequences. Please employ this script judiciously and acknowledge associated risks.
 
-## VirusTotal Scan Results
+## [VirusTotal Scan Results](https://www.virustotal.com/gui/file/cff1bcce92c7e050e5b120056a032dbac2af0f937e2636f53d46f780eaf2ba0f?nocache=1)
 
-Your security matters. The script has been personally scanned with VirusTotal for your peace of mind. You can view the scan results by clicking the link below:
-
-[VirusTotal Scan Results](https://www.virustotal.com/gui/file/cff1bcce92c7e050e5b120056a032dbac2af0f937e2636f53d46f780eaf2ba0f?nocache=1)
+Your security matters. The script has been personally scanned with VirusTotal for your peace of mind. You can view the scan results by clicking the [link](https://www.virustotal.com/gui/file/cff1bcce92c7e050e5b120056a032dbac2af0f937e2636f53d46f780eaf2ba0f?nocache=1).
 
 I take the security and trust of my users seriously. Verify the scan results before using the script.
