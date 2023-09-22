@@ -35,23 +35,29 @@ Before using the script, make sure you have the following prerequisites:
 
 ## Getting Started
 
-1. **Installation**:
+### Installation
+
+1. **AutoHotkey Installation**:
    - Ensure you have AutoHotkey installed on your system. You can download it from [AutoHotkey's official website](https://www.autohotkey.com/download).
+   
+2. **Script Download**:
    - Download the `NoReekoil.ahk` file from the repository.
 
-2. **Customization**:
-   - Customize the script's configuration settings according to your gaming preferences. You can modify settings such as:
-     - **Recoil Adjustments (pixelX and pixelY):** Modify these values to control horizontal and vertical recoil adjustments.
-     - **Fire Rate (shotsPerMinute):** Adjust the number of shots fired per minute for optimal fire rate.
-     - **Delay Increments (delayIncrement):** Fine-tune the delay between shots by changing this value.
-     - **Period (period):** Change the time period for adjustments and actions.
-     - **Pixel Increment (pixelIncrement):** Modify the amount by which pixel adjustments change.
-     - **First Shot Compensation (firstShotEnabled, firstShotCompensationX, firstShotCompensationY):** Enable or disable adjustments specifically for the first shot fired.
+### Customization
 
-3. **Running the Script**:
-   - Save the text file with a `.ahk` extension. For example, you can name it `RecoilControl.ahk`.
-   - Double-click the saved `.ahk` file to run the script.
-   - The script will only become active when the specified game window process is running.
+- Customize the script's configuration settings according to your gaming preferences. You can modify settings such as:
+  - **Recoil Adjustments (pixelX and pixelY):** Modify these values to control horizontal and vertical recoil adjustments.
+  - **Fire Rate (shotsPerMinute):** Adjust the number of shots fired per minute for optimal fire rate.
+  - **Delay Increments (delayIncrement):** Fine-tune the delay between shots by changing this value.
+  - **Period (period):** Change the time period for adjustments and actions.
+  - **Pixel Increment (pixelIncrement):** Modify the amount by which pixel adjustments change.
+  - **First Shot Compensation (firstShotEnabled, firstShotCompensationX, firstShotCompensationY):** Enable or disable adjustments specifically for the first shot fired.
+
+### Running the Script
+
+- Save the text file with a `.ahk` extension. For example, you can name it `RecoilControl.ahk`.
+- Double-click the saved `.ahk` file to run the script.
+- The script will only become active when the specified game window process is running.
 
 ## Configuration
 
@@ -63,35 +69,36 @@ Before using the script, make sure you have the following prerequisites:
 
 - The script defines various hotkeys to trigger actions such as adjusting recoil, modifying settings, and more. These hotkeys are active only when the specified game window process is running. Below is a list of some predefined hotkeys and their actions:
 
-  - **Hotkey:** Action
-  - `Numpad0`: Load settings from an INI file.
-  - `Numpad1`: Save settings to an INI file.
-  - `Numpad2`: Toggle recoil control on/off.
-  - `Numpad3`: Toggle first shot compensation on/off.
-  - `Numpad5`: Cycle through weapons array to dynamically load a weapon config (Vertical Recoil & Shots Per Minute).
-  - `Numpad6`: Decrease pixel adjustments.
-  - `Numpad9`: Increase pixel adjustments.
-  - `Numpad7`: Decrease delay between shots.
-  - `Numpad8`: Increase delay between shots.
-  - `NumpadSub`: Decrease the time period for adjustments.
-  - `NumpadAdd`: Increase the time period for adjustments.
-  - `PgUp`: Increase vertical pixel adjustment.
-  - `PgDn`: Decrease vertical pixel adjustment.
-  - `Del`: Decrease horizontal pixel adjustment.
-  - `End`: Increase horizontal pixel adjustment.
-  - `LButton`: Handle recoil compensation while LButton+RButton on the mouse are held down.
+  | Hotkey | Action |
+  |--------|--------|
+  | `Numpad0` | Load settings from an INI file. |
+  | `Numpad1` | Save settings to an INI file. |
+  | `Numpad2` | Toggle recoil control on/off. |
+  | `Numpad3` | Toggle first shot compensation on/off. |
+  | `Numpad5` | Cycle through weapons array to dynamically load a weapon config (Vertical Recoil & Shots Per Minute). |
+  | `Numpad6` | Decrease pixel adjustments. |
+  | `Numpad9` | Increase pixel adjustments. |
+  | `Numpad7` | Decrease delay between shots. |
+  | `Numpad8` | Increase delay between shots. |
+  | `NumpadSub` | Decrease the time period for adjustments. |
+  | `NumpadAdd` | Increase the time period for adjustments. |
+  | `PgUp` | Increase vertical pixel adjustment. |
+  | `PgDn` | Decrease vertical pixel adjustment. |
+  | `Del` | Decrease horizontal pixel adjustment. |
+  | `End` | Increase horizontal pixel adjustment. |
+  | `LButton` | Handle recoil compensation while LButton+RButton on the mouse are held down. |
 
 ## INI File Usage
 
 - The script allows you to load and save settings to an INI file, making it easy to customize and switch between different configurations.
 - To load settings from an INI file:
    1. Press the `Numpad0` hotkey.
-   2. Enter the desired weapon or configuration name when prompted.
-   3. The script will load settings from the specified INI section.
+    2. Enter the desired weapon or configuration name when prompted.
+    3. The script will load settings from the specified INI section.
 - To save settings to an INI file:
-   1. Press the `Numpad1` hotkey.
-   2. Enter the desired weapon or configuration name when prompted.
-   3. The script will save the current settings to the specified INI section.
+    1. Press the `Numpad1` hotkey.
+    2. Enter the desired weapon or configuration name when prompted.
+    3. The script will save the current settings to the specified INI section.
 
 ## Important Notes
 
@@ -111,4 +118,3 @@ For your peace of mind, I have personally scanned this script using VirusTotal t
 [VirusTotal Scan Results](https://www.virustotal.com/gui/file/cff1bcce92c7e050e5b120056a032dbac2af0f937e2636f53d46f780eaf2ba0f?nocache=1)
 
 I take the security and trust of my users seriously, and I encourage you to verify the scan results before using this script.
-
