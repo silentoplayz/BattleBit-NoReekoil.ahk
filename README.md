@@ -1,4 +1,4 @@
-# AutoHotkey Recoil Control Script
+# BattleBit Remastered AutoHotkey Recoil Control Script
 
 ## Table of Contents
 - [Introduction](#introduction)
