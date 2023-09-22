@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BattleBit Remastered AutoHotkey Recoil Control Script</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        /* Base Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #ffffff;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            transition: background-color 0.3s, color 0.3s;
+            line-height: 1.6;
+			font-size: 18px;
+        }
+
+        h1 {
+            margin-top: 20px;
+			font-size: 2.5em;
+        }
+
+        h2 {
+            font-size: 2em;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 10px;
+            margin-top: 20px;
+        }
+
+        h3 {
+            font-size: 1.75em;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 10px;
+            margin-top: 20px;
+        }
+
+        a {
+            color: #007BFF;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+            transition: background-color 0.3s;
+        }
+
+        th {
+            background-color: #f5f5f5;
+        }
+
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+
+        /* Dark Mode styles */
+        body.dark-mode {
+            background-color: #121212;
+            color: #ffffff;
+        }
+
+        body.dark-mode a {
+            color: #bb86fc;
+        }
+
+        body.dark-mode th, body.dark-mode td {
+            border-color: #444;
+        }
+
+        body.dark-mode th {
+            background-color: #333;
+            color: #bbb;
+        }
+
+        body.dark-mode h1, body.dark-mode h2, body.dark-mode h3 {
+            border-color: #444;
+        }
+
+        body.dark-mode tr:hover {
+            background-color: #333;
+        }
+
+        /* Toggle Switch Styles */
+        .switch {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+            z-index: 1000;
+        }
+
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+        }
+
+        input:checked + .slider {
+            background-color: #bb86fc;
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(26px);
+        }
+
+        .slider.round {
+            border-radius: 34px;
+        }
+
+        .slider.round:before {
+            border-radius: 50%;
+        }
+
+        /* Table of Contents */
+        #toc {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+
+        /* Enhanced Table Styles */
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        body.dark-mode tr:nth-child(even) {
+            background-color: #1f1f1f;
+        }
+
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Enhanced Dark Mode Transition */
+        body, a, th, td, h1, h2, h3 {
+            transition: background-color 0.5s, color 0.5s;
+        }
+
+        body.dark-mode #toc {
+            background: rgba(18, 18, 18, 0.9);
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 40px;
+            padding: 20px;
+            background: transparent;
+            text-align: center;
+        }
+
+        body.dark-mode footer {
+            background: transparent;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Toggle Switch -->
+    <label class="switch">
+        <input type="checkbox" id="darkModeToggle">
+        <span class="slider round"></span>
+    </label>
+
+    <!-- Main Title -->
+    <h1>BattleBit Remastered AutoHotkey Recoil Control Script</h1>
+
+    <!-- Table of Contents -->
+    <div id="toc">
+        <strong>Table of Contents</strong>
+        <ul>
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#prerequisites">Prerequisites</a></li>
+            <li><a href="#getting-started">Getting Started</a></li>
+            <li><a href="#configuration">Configuration</a></li>
+            <li><a href="#hotkeys">Hotkeys</a></li>
+            <li><a href="#ini-file-usage">INI File Usage</a></li>
+            <li><a href="#important-notes">Important Notes</a></li>
+            <li><a href="#disclaimer">Disclaimer</a></li>
+        </ul>
+    </div>
+
+<h2 id="introduction">Introduction</h2>
+<p>This AutoHotkey script is designed to assist with controlling recoil and various aspects of gameplay in BattleBit Remastered. It offers features such as adjusting recoil, controlling fire rate, and modifying other settings to improve accuracy and performance. However, please exercise caution and ensure you're adhering to the terms of service of the game you're using this script with.</p>
+
+<h2 id="features">Features</h2>
+<ul>
+    <li><strong>Recoil Control:</strong> Gain an edge in battles by dynamically adjusting mouse movements to counteract weapon recoil.</li>
+    <li><strong>Fire Rate Control:</strong> Achieve optimal firing rates and accuracy by tweaking the time between shots.</li>
+    <li><strong>Configuration Settings:</strong> Customize the script's behavior to match your gaming environment, including window settings and personal preferences.</li>
+    <li><strong>First Shot Compensation:</strong> Apply pixelX and PixelY adjustments to the first shot to compensate for first-shot recoil.</li>
+    <li><strong>Dynamic Script Naming:</strong> When compiled as an .exe, the script generates unique names for added discretion.</li>
+</ul>
+
+<h2 id="prerequisites">Prerequisites</h2>
+<p>Before using the script, make sure you have the following prerequisites:</p>
+<ul>
+    <li><a href="https://www.autohotkey.com/download/">AutoHotkey</a>: This script relies on AutoHotkey, so ensure it's installed on your system.</li>
+</ul>
+
+<h2 id="getting-started">Getting Started</h2>
+<h3 id="installation">Installation</h3>
+<ol>
+    <li><strong>AutoHotkey Installation</strong>:
+        <ul>
+            <li>If you haven't already, download and install AutoHotkey from the <a href="https://www.autohotkey.com/download">official website</a>.</li>
+        </ul>
+    </li>
+    <li><strong>Script Download</strong>:
+        <ul>
+            <li>Download the <a href="https://github.com/Silentoplayz/BattleBitNoRecoil.ahk/blob/main/NoReekoil.ahk">NoReekoil.ahk</a> file from this repository.</li>
+        </ul>
+    </li>
+</ol>
+
+<h3 id="customization">Customization</h3>
+<ul>
+    <li>Customize the script's configuration settings according to your gaming preferences. You can adjust key settings such as:
+        <ul>
+            <li><strong>Recoil Adjustments (pixelX and pixelY):</strong> Modify these values to control horizontal and vertical recoil adjustments.</li>
+            <li><strong>Fire Rate (shotsPerMinute):</strong> Adjust the number of shots fired per minute for optimal fire rate.</li>
+            <li><strong>Delay Increments (delayIncrement):</strong> Fine-tune the delay between shots by changing this value.</li>
+            <li><strong>Period (period):</strong> Change the time period for adjustments and actions.</li>
+            <li><strong>Pixel Increment (pixelIncrement):</strong> Modify the amount by which pixel adjustments change.</li>
+            <li><strong>First Shot Compensation (firstShotEnabled, firstShotCompensationX, firstShotCompensationY):</strong> Enable or disable adjustments specifically for the first shot fired.</li>
+        </ul>
+    </li>
+</ul>
+
+<h3 id="running-the-script">Running the Script</h3>
+<ul>
+    <li>Double-click the saved .ahk file to run the script.</li>
+    <li>The script will only become active when the specified game window process is running.</li>
+</ul>
+
+<h2 id="configuration">Configuration</h2>
+<p>Unleash the full potential of the script by customizing its settings:</p>
+<ul>
+    <li>Explore default configuration values in the script's "Configuration" section.</li>
+    <li>Tweak settings such as recoil adjustments, fire rate, delay increments, and more to create your ideal gaming experience.</li>
+    <li>Use the script's INI file support to save and load configurations, facilitating easy switches between weapons or scenarios.</li>
+</ul>
+
+<h2 id="hotkeys">Hotkeys</h2>
+<p>The script defines various hotkeys to trigger actions such as adjusting recoil, modifying settings, and more. These hotkeys are active only when the specified game window process is running. Below is a list of some predefined hotkeys and their actions:</p>
+<table>
+    <thead>
+        <tr>
+            <th>Hotkey</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Numpad0</td>
+            <td>Load settings from an INI file.</td>
+        </tr>
+        <tr>
+            <td>Numpad1</td>
+            <td>Save settings to an INI file.</td>
+        </tr>
+        <tr>
+            <td>Numpad2</td>
+            <td>Toggle recoil control on/off.</td>
+        </tr>
+        <tr>
+            <td>Numpad3</td>
+            <td>Toggle first shot compensation on/off.</td>
+        </tr>
+        <tr>
+            <td>Numpad5</td>
+            <td>Cycle through weapons array to dynamically load a weapon config (Vertical Recoil & Shots Per Minute).</td>
+        </tr>
+        <tr>
+            <td>Numpad6</td>
+            <td>Decrease pixel adjustments.</td>
+        </tr>
+        <tr>
+            <td>Numpad9</td>
+            <td>Increase pixel adjustments.</td>
+        </tr>
+        <tr>
+            <td>Numpad7</td>
+            <td>Decrease delay between shots.</td>
+        </tr>
+        <tr>
+            <td>Numpad8</td>
+            <td>Increase delay between shots.</td>
+        </tr>
+        <tr>
+            <td>NumpadSub</td>
+            <td>Decrease the time period for adjustments.</td>
+        </tr>
+        <tr>
+            <td>NumpadAdd</td>
+            <td>Increase the time period for adjustments.</td>
+        </tr>
+        <tr>
+            <td>PgUp</td>
+            <td>Increase vertical pixel adjustment.</td>
+        </tr>
+        <tr>
+            <td>PgDn</td>
+            <td>Decrease vertical pixel adjustment.</td>
+        </tr>
+        <tr>
+            <td>Del</td>
+            <td>Decrease horizontal pixel adjustment.</td>
+        </tr>
+        <tr>
+            <td>End</td>
+            <td>Increase horizontal pixel adjustment.</td>
+        </tr>
+        <tr>
+            <td>LButton</td>
+            <td>Handle recoil compensation while LButton+RButton on the mouse are held down.</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2 id="ini-file-usage">INI File Usage</h2>
+<ul>
+    <li>The script allows you to load and save settings to an INI file, making it easy to customize and switch between different configurations.</li>
+    <li>To load settings from an INI file:
+        <ol>
+            <li>Press the Numpad0 hotkey.</li>
+            <li>Enter the desired weapon or configuration name when prompted.</li>
+            <li>The script will load settings from the specified INI section.</li>
+        </ol>
+    </li>
+    <li>To save settings to an INI file:
+        <ol>
+            <li>Press the Numpad1 hotkey.</li>
+            <li>Enter the desired weapon or configuration name when prompted.</li>
+            <li>The script will save the current settings to the specified INI section.</li>
+        </ol>
+    </li>
+</ul>
+
+<h2 id="important-notes">Important Notes</h2>
+<ul>
+    <li>Use this script responsibly and ensure that its usage complies with the terms of service of the game you're playing.</li>
+    <li>Always exercise caution when using scripts from external sources to avoid potential security risks or unintended consequences.</li>
+    <li>Keep in mind that altering your gameplay experience might lead to ethical considerations, including potential violations of fair play and anti-cheat mechanisms.</li>
+    <li>Be aware that AutoHotkey scripts might not work seamlessly with all games due to variations in game engines and anti-cheat implementations.</li>
+</ul>
+
+<h2 id="disclaimer">Disclaimer</h2>
+<p>This script is provided "as-is." The developers and contributors accept no responsibility for its usage or any resulting consequences. Please employ this script judiciously and acknowledge associated risks.</p>
+
+<p><a href="https://www.virustotal.com/gui/file/cff1bcce92c7e050e5b120056a032dbac2af0f937e2636f53d46f780eaf2ba0f?nocache=1">VirusTotal Scan Results</a></p>
+<p>Your security matters. The script has been personally scanned with VirusTotal for your peace of mind. You can view the scan results by clicking the <a href="https://www.virustotal.com/gui/file/cff1bcce92c7e050e5b120056a032dbac2af0f937e2636f53d46f780eaf2ba0f?nocache=1">link</a>.</p>
+<p>I take the security and trust of my users seriously. Verify the scan results before using the script.</p>
+
+    <footer>
+        Made with ❤️ by G30. Check out the project on <a href="https://github.com/Silentoplayz/BattleBit-NoReekoil.ahk">GitHub</a>.
+    </footer>
+
+    <script>
+        const toggleSwitch = document.getElementById('darkModeToggle');
+        const currentTheme = localStorage.getItem('theme');
+
+        if (currentTheme) {
+            document.body.classList.add(currentTheme);
+            if (currentTheme === 'dark-mode') {
+                toggleSwitch.checked = true;
+            }
+        }
+
+        toggleSwitch.addEventListener('change', function() {
+            if (this.checked) {
+                document.body.classList.add('dark-mode');
+                localStorage.setItem('theme', 'dark-mode');
+            } else {
+                document.body.classList.remove('dark-mode');
+                localStorage.setItem('theme', 'light-mode');
+            }
+        });
+    </script>
+
+</body>
+
+</html>
