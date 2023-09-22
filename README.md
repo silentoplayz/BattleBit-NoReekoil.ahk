@@ -23,9 +23,9 @@ This AutoHotkey script is designed to assist with controlling recoil and various
 
 - **Recoil Control:** The script helps mitigate weapon recoil by adjusting mouse movements in real-time.
 - **Fire Rate Control:** Modify the delay between shots to optimize firing rate and accuracy.
-- **Configuration Settings:** Customize the script's behavior to suit your playstyle and preferences.
-- **First Shot Compensation:** Apply special adjustments to the first shot to enhance accuracy.
-- **Dynamic Script Naming:** The script generates unique names based on the game and settings for better organization.
+- **Configuration Settings:** Customize the script's behavior to suit your target window and other preferences.
+- **First Shot Compensation:** Apply pixelX and PixelY adjustments to the first shot to compensate for first-shot recoil.
+- **Dynamic Script Naming:** The script generates unique names if the .ahk script is compiled as an .exe for a poor-man's attempt at masking the process name and whatnot.
 
 ## Prerequisites
 
@@ -37,7 +37,7 @@ Before using the script, make sure you have the following prerequisites:
 
 1. **Installation**:
    - Ensure you have AutoHotkey installed on your system. You can download it from [AutoHotkey's official website](https://www.autohotkey.com/).
-   - Copy the script contents provided above and paste them into a new text file using a text editor.
+   - Download the `NoReekoil.ahk` file from the repository.
 
 2. **Customization**:
    - Customize the script's configuration settings according to your gaming preferences. You can modify settings such as:
@@ -68,7 +68,7 @@ Before using the script, make sure you have the following prerequisites:
   - `Numpad1`: Save settings to an INI file.
   - `Numpad2`: Toggle recoil control on/off.
   - `Numpad3`: Toggle first shot compensation on/off.
-  - `Numpad5`: Cycle through different weapons and adjust settings.
+  - `Numpad5`: Cycle through weapons array to dynamically load a weapon config (Vertical Recoil & Shots Per Minute).
   - `Numpad6`: Decrease pixel adjustments.
   - `Numpad9`: Increase pixel adjustments.
   - `Numpad7`: Decrease delay between shots.
@@ -79,7 +79,7 @@ Before using the script, make sure you have the following prerequisites:
   - `PgDn`: Decrease vertical pixel adjustment.
   - `Del`: Decrease horizontal pixel adjustment.
   - `End`: Increase horizontal pixel adjustment.
-  - `LButton`: Handle recoil compensation while mouse buttons are held down.
+  - `LButton`: Handle recoil compensation while LButton+RButton on the mouse are held down.
 
 ## INI File Usage
 
