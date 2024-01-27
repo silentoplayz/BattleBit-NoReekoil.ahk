@@ -16,7 +16,7 @@
 
 ## Introduction
 
-This AutoHotkey script is designed to assist with controlling recoil and various aspects of gameplay in BattleBit Remastered. It offers features such as adjusting recoil, controlling fire rate, and modifying other settings to improve accuracy and performance. However, please exercise caution and ensure you're adhering to the terms of service of the game you're using this script with.
+This AutoHotkey script is designed to assist with controlling recoil in BattleBit Remastered. It offers features such as adjusting recoil, controlling fire rate, and modifying other settings to improve accuracy and performance. However, please exercise caution and ensure you're adhering to the terms of service of the game you're using this script with.
 
 ## Features
 
